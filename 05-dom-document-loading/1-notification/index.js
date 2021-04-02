@@ -1,5 +1,7 @@
 export default class NotificationMessage {
 
+  static activePopup;
+  
   constructor(message,{
     type = '',
     duration = 0,
@@ -10,7 +12,7 @@ export default class NotificationMessage {
     this.render();
   }
 
-  static activePopup;
+  
 
   show(popupContainer = document.body){
     popupContainer.append(this.element);
